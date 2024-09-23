@@ -11,6 +11,7 @@
     "start": "node build/bin/www"
   },
   "dependencies": {
+    "basic-api-boilerplate": "file:",
     "express": "^4.19.2"
   },
   "devDependencies": {
