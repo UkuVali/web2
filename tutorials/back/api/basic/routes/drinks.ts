@@ -51,3 +51,12 @@ router.get("/", (_req, res) => {
 });
 
 export default router;
+
+router.get("/:id", (req, res) => {
+  const id = Number(req.params.id);
+  const drink = drinks.find((drink) => drink.id === id);
+  if (!drink) {
+    return res.sendStatus(404);
+  }
+  return res.json(drink);
+});
